@@ -1,0 +1,10 @@
+student react web pro audi !!   // 5/29/2019 full adv
+
+
+
+npm installing 
+
+npm install --save bootstrap
+npm install --save reactstrap react react-dom
+
+src/index import 'bootstrap/dist/css/bootstrap.css';
