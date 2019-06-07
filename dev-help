@@ -4,13 +4,7 @@ student react web pro audi !!   // 5/29/2019 full adv
 
 npm installing 
 
-npm install --save 
-npm install --save  bootstrap reactstrap react react-dom
-npm install --save react-router-dom
-npm i @material-ui/core
-npm i @material-ui/core --save
-npm install --save react-redux
+npm install --save bootstrap
+npm install --save reactstrap react react-dom
 
-
- 
 src/index import 'bootstrap/dist/css/bootstrap.css';
