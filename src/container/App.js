@@ -11,8 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>test</div>
-        <Footer />
+        <div>Audi Portal target!</div>
       </div>
     );
   }
