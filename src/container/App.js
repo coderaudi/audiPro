@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
-// import Header from "../view/header";
-import Footer from "../view/footer";
+import Dashbord from "../component/dashbord/dashbord";
+import AppRouter from "../routes/AppRouter";
+import { Router, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>Audi Portal target!</div>
-        <div>Basic Protal one1</div>
+        <Dashbord />
+        <AppRouter />
       </div>
     );
   }

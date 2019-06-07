@@ -1,15 +1,13 @@
 import React from "react";
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // layout components
 
-import Home from "../view/layout/home";
-
 // auth components
 
-import Signup from "../view/auth/signup";
-import Login from "../view/auth/login";
-
+import Dashbord from "../component/dashbord/dashbord";
+import HomePageLogin from "../view/login/login";
 // view components
 import StudentList from "../view/student/StudentList";
 
@@ -27,15 +25,15 @@ function Users() {
 
 function AppRouter() {
   return (
-    <Router>
-      <div>
+    <div>
+      <Router>
         <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about/">About</Link>
+              <Link to="/coder/dashbord">Dashbord</Link>
             </li>
             <li>
               <Link to="/coder/login">Login</Link>
@@ -51,16 +49,12 @@ function AppRouter() {
             </li>
           </ul>
         </nav>
-
-        <Route path="/" exact component={Home} />
         <Route path="/about/" component={About} />
-        <Route path="/users/" component={Users} />
-
+        <Route path="/coder/dashbord" component={Dashbord} />
+        <Route path="/coder/home" component={HomePageLogin} />
         <Route path="/coder/student" component={StudentList} />
-        <Route path="/coder/login" component={Login} />
-        <Route path="/coder/signup" component={Signup} />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
