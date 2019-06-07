@@ -9,7 +9,9 @@ class Footer extends Component {
   }
   render() {
     this.props.getAdminName("Abhijet");
-    return <div> student portal web Footer store name new branch design</div>;
+    return (
+      <div> student portal web Footer store name : {this.props.adminName}</div>
+    );
   }
 }
 
