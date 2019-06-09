@@ -23,7 +23,7 @@ class NotePad extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      note: []
+      note: ""
     };
 
     this.submitDataHandler = this.submitDataHandler.bind(this);
@@ -35,7 +35,16 @@ class NotePad extends Component {
 
   submitDataHandler = event => {
     let note = this.state.note;
-    this.props.addNote(note);
+    let noteObj = {
+      userId: 1,
+      id: 1,
+      title: note,
+      completed: false
+    };
+
+    console.log(noteObj);
+
+    this.props.addNote(noteObj);
   };
 
   render() {

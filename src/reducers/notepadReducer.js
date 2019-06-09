@@ -1,6 +1,7 @@
 // action type
 import { ADD_NOTE } from "../actions/action-types";
 const initialState = {
+  notes: ["welcoem"],
   titleList: [
     {
       userId: 1,
@@ -1224,7 +1225,8 @@ const initialState = {
 function notepadReducer(state = initialState, action) {
   if (action.type === ADD_NOTE) {
     return Object.assign({}, state, {
-      notes: state.notes.concat(action.payload)
+      // notes: state.notes.concat(action.payload)
+      titleList: state.titleList.concat(action.payload)
     });
   }
   return state;
