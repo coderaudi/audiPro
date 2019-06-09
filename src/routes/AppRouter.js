@@ -11,7 +11,7 @@ import {
 import Home from "../view/home/home";
 import Error from "../view/notfound/404";
 import Login from "../view/login/login";
-
+import Notepad from "../view/notepad/notepad";
 class AppRouter extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +25,8 @@ class AppRouter extends Component {
             <Switch>
               <Route exact path="/home" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/addnote" component={Notepad} />
+
               <Route path="/" component={Error} />
             </Switch>
           </div>
