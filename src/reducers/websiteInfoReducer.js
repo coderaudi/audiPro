@@ -1,9 +1,9 @@
 // action type
 import { ADD_ARTICLE } from "../actions/action-types";
 const initialState = {
-  adminMobile: 777777
+  copyRightText: "copy by AudiK19 resV"
 };
-function adminReducer(state = initialState, action) {
+function websiteInfoReducer(state = initialState, action) {
   if (action.type === ADD_ARTICLE) {
     return Object.assign({}, state, {
       articles: state.articles.concat(action.payload)
@@ -11,4 +11,4 @@ function adminReducer(state = initialState, action) {
   }
   return state;
 }
-export default adminReducer;
+export default websiteInfoReducer;

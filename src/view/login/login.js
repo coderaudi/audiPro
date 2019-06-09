@@ -101,6 +101,8 @@ class Login extends Component {
                   <div className="panel-body">
                     {this.state.admin.adminMessage}
                     {this.props.myAdminMobile}
+                    <hr />
+                    {this.props.webInfo.copyRightText}
                   </div>
                 </div>
               </div>
@@ -112,9 +114,10 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = ({ admin }) => {
+const mapStateToProps = ({ admin, webInfo }) => {
   return {
-    myAdminMobile: admin.adminMobile
+    myAdminMobile: admin.adminMobile,
+    webInfo
   };
 };
 
