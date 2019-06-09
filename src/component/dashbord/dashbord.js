@@ -19,6 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 import { mainListItems, secondaryListItems } from "./listitem";
+
 import Chart from "./Chart";
 import Deposits from "./deposite";
 import Orders from "./deposite";
@@ -181,7 +182,7 @@ export default function Dashboard() {
         <Divider />
         <List>{mainListItems}</List>
         <Divider />
-        <List>{secondaryListItems}</List>
+        <List>{}</List>
       </Drawer>
 
       <main className={classes.content}>

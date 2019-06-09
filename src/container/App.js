@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Dashbord from "../component/dashbord/dashbord";
 import AppRouter from "../routes/AppRouter";
-import { Router, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {

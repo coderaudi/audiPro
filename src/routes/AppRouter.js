@@ -1,44 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
+import {
+  Route,
+  NavLink,
+  BrowserRouter as Router,
+  Switch
+} from "react-router-dom";
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// importing the routes / views
 
-// layout components
+import Home from "../view/home/home";
+import Error from "../view/notfound/404";
 
-function Index() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
-
-function AppRouter() {
-  return (
-    <div>
-      <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/user">User</Link>
-            </li>
-          </ul>
-        </nav>
-        <Route path="/home" component={Index} />
-        <Route path="/about" component={About} />
-        <Route path="/user" component={Users} />
-      </Router>
-    </div>
-  );
+class AppRouter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div>
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path="/home" component={Home} />
+              <Route path="/" component={Error} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default AppRouter;

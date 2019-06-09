@@ -8,14 +8,24 @@ import { createStore } from "redux";
 import rootReducer from "./reducers/index";
 import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from "./serviceWorker";
+import {
+  Route,
+  NavLink,
+  BrowserRouter as Router,
+  Switch
+} from "react-router-dom";
 
+import Student from "./view/student/StudentList";
+import Notfound from "./view/notfound/404";
+
+import AppRouting from "./routes/AppRouter";
 const store = createStore(rootReducer);
 
 console.log(store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppRouting />
   </Provider>,
   document.getElementById("root")
 );
